@@ -1,5 +1,5 @@
 ﻿body {
-    padding-top: 50px;
+    padding-top: 20px;
     padding-bottom: 20px;
 }
 
@@ -23,6 +23,23 @@ textarea {
     max-width: 280px;
 }
 
-.navbar{
-    height: 100px;
+@media (min-width: 768px) {
+    .navbar-nav > li > a {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        line-height: 100px;
+        height: 100px;
+        background-color: white;
+        font-weight: 600;
+        color: #02006b;
+    }
+
+    .body-content{
+        margin-top: 20px;
+    }
+
+}
+
+.carousel-inner > .item > img{
+    margin: auto;
 }
