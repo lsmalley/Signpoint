@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Signpoint</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="whole">
+        <!--Banner goes here-->
+        <div class="banner">
+            <img src="~/Content/1440x300.jpg" />
+        </div>
+    
+
+        <div class="gridcontainer">
+            <div class="vertical-menu">
+                @if (ViewBag.Title == "About")
+                {
+                    @Html.ActionLink("Home", "Index", "Home");
+                    @Html.ActionLink("About", "About", "Home", new { @class = "active" });
+                    @Html.ActionLink("Portfolio", "Portfolio", "Home");
+                    @Html.ActionLink("Contact", "Contact", "Home");
+                }
+            
+                @if (ViewBag.Title == "Contact")
+                {
+                    @Html.ActionLink("Home", "Index", "Home");
+                    @Html.ActionLink("About", "About", "Home");
+                    @Html.ActionLink("Portfolio", "Portfolio", "Home");
+                    @Html.ActionLink("Contact", "Contact", "Home", new { @class = "active" });
+                }
+            </div>
+            <div class="textfield">
+                <p>TEXT GOES HERE</p>
+            </div>
+        </div>
+    
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+        </div>
+    <!--Banner goes here-
+    <div class="banner">
+        <img src="~/Content/1440x300.jpg" />
+    </div>
+    
+
+    <div class="gridcontainer">
+        <div class="vertical-menu">
+            if (ViewBag.Title == "About")
+            {
+                Html.ActionLink("Home", "Index", "Home");
+                Html.ActionLink("About", "About", "Home", new { class = "active" });
+                Html.ActionLink("Portfolio", "Portfolio", "Home");
+                Html.ActionLink("Contact", "Contact", "Home");
+            }
+            
+            if (ViewBag.Title == "Contact")
+            {
+                Html.ActionLink("Home", "Index", "Home");
+                Html.ActionLink("About", "About", "Home");
+                Html.ActionLink("Portfolio", "Portfolio", "Home");
+                Html.ActionLink("Contact", "Contact", "Home", new { class = "active" });
+            }
+        </div>
+        <div class="textfield">
+            <p>TEXT GOES HERE</p>
+        </div>
+    </div>
+    
+    <div class="container body-content">
+        RenderBody()
+        <hr />-->
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Signpoint</p>
+            <div class="watermark">
+                <img src="~/Content/sptwatermark.jpg" />
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -38,8 +38,59 @@ textarea {
         margin-top: 20px;
     }
 
+    .watermark > img{
+        text-align: right;
+    }
+
+}
+
+.vertical-menu {
+    width: 100px;
+    margin-left: 15px;
+}
+
+.vertical-menu a{
+    color: #02006b;
+    display: block;
+    font-size: 20px;
+}
+
+.vertical-menu a:hover{
+    background-color: #eee;
+    text-decoration: none;
+    color: #02006b;
+}
+
+.vertical-menu a:active{
+    background-color: #02006b;
+    color: #ffe900;
+}
+
+.vertical-menu > a.active {
+    background-color: #02006b;
+    color: #ffe900 !important;
 }
 
 .carousel-inner > .item > img{
     margin: auto;
 }
+
+.banner{
+    text-align: center;
+}
+
+.gridcontainer{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto;
+    grid-template-areas: "vertical-menu textfield";
+    grid-column-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+}
+
+/*.whole{
+    margin-left: 100px;
+    margin-right: 100px;
+}*/
