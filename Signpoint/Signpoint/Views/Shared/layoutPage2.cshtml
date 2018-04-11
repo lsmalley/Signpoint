@@ -9,14 +9,13 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="whole">
-        <!--Banner goes here-->
-        <div class="banner">
-            <img src="~/Content/1440x300.jpg" />
-        </div>
-    
-
+    <div class="container">
         <div class="gridcontainer">
+            <!--Banner goes here-->
+            <div class="banner">
+                <img src="~/Content/1440x300.jpg" class="img-responsive" />
+            </div>
+
             <div class="vertical-menu">
                 @if (ViewBag.Title == "About")
                 {
@@ -35,14 +34,14 @@
                 }
             </div>
             <div class="textfield">
-                <p>TEXT GOES HERE</p>
+                @RenderBody()
             </div>
         </div>
     
         <div class="container body-content">
-            @RenderBody()
+            <!--RenderBody()-->
             <hr />
-        </div>
+       
     <!--Banner goes here-
     <div class="banner">
         <img src="~/Content/1440x300.jpg" />
@@ -75,12 +74,12 @@
     <div class="container body-content">
         RenderBody()
         <hr />-->
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Signpoint</p>
-            <div class="watermark">
-                <img src="~/Content/sptwatermark.jpg" />
-            </div>
-        </footer>
+            <footer>
+                <img src="~/Content/sptwatermark.jpg" class="pull-right"/>
+                <p>&copy; @DateTime.Now.Year - Signpoint</p>
+                <p>Contact Hours: 9:00am - 5:00pm</p>
+            </footer>
+        </div>
     </div>
 </body>
 </html>
