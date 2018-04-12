@@ -75,7 +75,6 @@ textarea {
 
 .banner{
     text-align: center;
-    /*grid-area: 1 / 1 / 3 / 2;*/
     grid-area: banner;
 }
 
@@ -83,17 +82,10 @@ textarea {
     display: grid;
     grid-template-columns: 20% 80%;
     grid-template-rows: auto auto;
-    grid-template-areas: "banner banner"
-        "vertical-menu textfield";
+    grid-template-areas:    "banner banner"
+                            "vertical-menu textfield";
     grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    align-items: center;
+    grid-row-gap: 20px;
+    align-items: flex-start;
     justify-content: center;
 }
-
-/*.whole{
-    width: 1440px;
-    align-content: center;
-    margin-left: 100px;
-    margin-right: 100px;
-}*/

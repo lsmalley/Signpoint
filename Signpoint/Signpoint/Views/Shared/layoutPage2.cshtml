@@ -13,7 +13,7 @@
         <div class="gridcontainer">
             <!--Banner goes here-->
             <div class="banner">
-                <img src="~/Content/1440x300.jpg" class="img-responsive" />
+                <img src="~/Content/1440x300.jpg" class="img-responsive" alt="Signpoint Banner"/>
             </div>
 
             <div class="vertical-menu">
@@ -37,49 +37,11 @@
                 @RenderBody()
             </div>
         </div>
-    
-        <div class="container body-content">
-            <!--RenderBody()-->
-            <hr />
-       
-    <!--Banner goes here-
-    <div class="banner">
-        <img src="~/Content/1440x300.jpg" />
-    </div>
-    
-
-    <div class="gridcontainer">
-        <div class="vertical-menu">
-            if (ViewBag.Title == "About")
-            {
-                Html.ActionLink("Home", "Index", "Home");
-                Html.ActionLink("About", "About", "Home", new { class = "active" });
-                Html.ActionLink("Portfolio", "Portfolio", "Home");
-                Html.ActionLink("Contact", "Contact", "Home");
-            }
-            
-            if (ViewBag.Title == "Contact")
-            {
-                Html.ActionLink("Home", "Index", "Home");
-                Html.ActionLink("About", "About", "Home");
-                Html.ActionLink("Portfolio", "Portfolio", "Home");
-                Html.ActionLink("Contact", "Contact", "Home", new { class = "active" });
-            }
-        </div>
-        <div class="textfield">
-            <p>TEXT GOES HERE</p>
-        </div>
-    </div>
-    
-    <div class="container body-content">
-        RenderBody()
-        <hr />-->
-            <footer>
-                <img src="~/Content/sptwatermark.jpg" class="pull-right"/>
-                <p>&copy; @DateTime.Now.Year - Signpoint</p>
-                <p>Contact Hours: 9:00am - 5:00pm</p>
-            </footer>
-        </div>
+        <footer>
+            <img src="~/Content/sptwatermark.jpg" class="pull-right"/>
+            <p>&copy; @DateTime.Now.Year - Signpoint</p>
+            <p>Contact Hours: 9:00am - 5:00pm</p>
+        </footer>
     </div>
 </body>
 </html>
